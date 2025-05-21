@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Header from '../Components/Header/Header';
 import lessons from './lessons';
 import styles from './lessonstyles.module.css';
-import headerStyles from '../headerstyles.module.css';
 
 export default function LessonPage() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,32 +10,9 @@ export default function LessonPage() {
     const { topic } = useParams();
     const lesson = lessons[topic];
 
-    const handleLogout = () => {
-        if (window.confirm('Are you sure to logout?')) {
-            navigation('/LoginPage');
-        }
-    }
-
     return (
         <>
-            <header>
-                <div className={`${headerStyles.menu_container} ${isMenuOpen ? headerStyles.menu_open : headerStyles.menu_close}`}>
-                    <h2 className={isMenuOpen ? headerStyles.menu_close : ''} onClick={() => {setIsMenuOpen(!isMenuOpen)}}>X</h2>
-                    <ul>
-                        <li onClick={() => {navigation('../HomePage')}}>Home</li>
-                    </ul>
-                </div>
-                
-                <div className={headerStyles.left_side}>
-                    <h2 style={{ cursor: 'pointer' }} onClick={() => {setIsMenuOpen(!isMenuOpen)}}>☰</h2>
-                    <h3>E-Learning Website for CyberSecurity</h3>
-                </div>
-                <div className={headerStyles.right_side}>
-                    <div className={headerStyles.logout_button} onClick={() => handleLogout()}>
-                        Log Out
-                    </div>
-                </div>
-            </header>
+            <Header navigation={navigation} />
 
             <main className={styles.main_container}>
                 <div className={styles.title_container}>

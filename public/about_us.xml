@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<about_us>
+    <student id ='1'>
+        <name>Joshua O. Zabala</name>
+        <section>BSIT-2E</section>
+        <birthdate>July 27, 2004</birthdate>
+        <image>/assets/joshua.jpg</image>
+        <description>Programmer, UI\UX Developer</description>
+        <account_link>https://www.facebook.com/joshua.zabal.1</account_link>
+    </student>
+    <student id ='2'>
+        <name>Roxane A. Sombrero</name>
+        <section>BSIT-2E</section>
+        <birthdate>August 4, 2004</birthdate>
+        <image>/assets/roxane.jpg</image>
+        <description>Provided Topics and Tips, UI Developer</description>
+        <account_link>https://www.facebook.com/roxane.aguado.sombrero</account_link>
+    </student>
+    <student id ='3'>
+        <name>Angelo E. Almeniana</name>
+        <section>BSIT-2E</section>
+        <birthdate>September 22, 2004</birthdate>
+        <image>/assets/angelo.jpg</image>
+        <description>Provided, Topics and Tips, UI Developer</description>
+        <account_link>https://www.facebook.com/amirangelo.almeniana</account_link>
+    </student>
+</about_us>

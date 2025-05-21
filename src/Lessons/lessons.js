@@ -1,6 +1,9 @@
 import attack_targets from '../assets/attack_targets.png';
 import phishing from '../assets/phishing.webp';
 import malware from '../assets/malware.jpg';
+import network_trapping from '../assets/network-trapping.jpeg';
+import piracy from '../assets/piracy.webp';
+import attack_cloud from '../assets/attack_in_the_cloud.jpg';
 
 const lessons = {
     'attack-targets' : {
@@ -68,6 +71,65 @@ const lessons = {
                                                         - Consider using virtualization or sandboxing for testing unknown software` }
         ],
         image: malware
+    },
+    'network-trapping' : {
+        title: 'Network Trapping',
+        overview: `Network TAPs (Test Access Points) are hardware devices inserted between network
+                    connections to passively copy traffic for monitoring, security, and analysis purposes. Unlike
+                    SPAN ports, TAPs provide complete, unaltered data capture without impacting network
+                    performance. They are foundational for achieving full network visibility.
+                `,
+        content: [
+            { heading: `TAPs vs SPAN Ports`, text: `TAPs vs. SPAN Ports
+                                    ● TAPs: Offer 100% traffic capture, including errors, without introducing latency or altering
+                                    data.
+                                    ● SPAN Ports: May drop packets under high load, can miss errors, and might affect
+                                    network performance.
+                                    Therefore, TAPs are generally preferred for critical monitoring needs.
+                                    ` },
+            { heading: 'Best Practices for Deploying TAPs', text: `1. Deploy TAPs Universally: Implement TAPs across all critical network links to ensurecomprehensive visibility.
+                                                        2. Integrate TAPs During Initial Setup: Incorporate TAPs during network design to avoid future disruptions.
+                                                        3. Prefer TAPs Over SPAN Ports: Use TAPs where possible; reserve SPAN ports for less critical areas.
+                                                        4. Choose Between Passive and Active Based on Use Case: Select the appropriate TAP type considering power availability and network complexity.` }
+        ],
+        image: network_trapping
+    },
+    'wireless-network-pirating' : {
+        title: 'Wireless Network Pirating',
+        overview: `Wireless networks have become integral to daily life, but their convenience comes with security
+                    challenges. The article emphasizes the importance of understanding and mitigating
+                    vulnerabilities to protect against unauthorized access and data breaches.
+                `,
+        content: [
+            { heading: `Key Vulnerabilites in Wireless Networks`, text: `1. Weak Encryption Protocols: Outdated encryption methods like WEP and early versions of WPA are susceptible to attacks, allowing hackers to intercept and decipher network traffic.
+                                                            2. Default or Weak Passwords: Using factory-set or easily guessable passwords provides an easy entry point for attackers to access network resources.
+                                                            3. Misconfigured Access Points: Improperly set up routers or access points, such as those with open ports or unnecessary services enabled, can create exploitable securitygaps.
+                                                            4. Rogue Access Points: Attackers may set up unauthorized access points that mimic legitimate networks, tricking users into connecting and exposing their data.` },
+            { heading: 'Importance of Awareness and Proactive Measures', text: `The article underscores that recognizing these vulnerabilities is the first step toward securing wireless networks. Implementing strong security measures, such as updating encryption protocols, using robust passwords, properly configuring network devices, and monitoring for unauthorized access points, is crucial. Regular vulnerability assessments and staying informed about emerging threats are also recommended to maintain network integrity.` }
+        ],
+        image: piracy
+    },
+    'attack-in-the-cloud' : {
+        title: 'Attack in the Cloud',
+        overview: `As organizations increasingly adopt cloud technologies, understanding and mitigating
+                    cloud-specific security threats becomes paramount. The article outlines prevalent attack types
+                    and offers best practices to bolster cloud security
+                `,
+        content: [
+            { heading: `Common Cloud Security Threats`, text: `● Misconfigurations: Incorrect settings in cloud environments can expose sensitive data or systems to unauthorized access.
+                                                            ● Insecure APIs: Poorly secured application programming interfaces can be exploited to gain unauthorized access or manipulate services.
+                                                            ● Account Hijacking: Attackers may compromise user credentials to gain control over cloud accounts, leading to data breaches or service disruptions.
+                                                            ● Insider Threats: Malicious or negligent actions by employees or contractors can lead to significant security incidents.
+                                                            ● Denial of Service (DoS) Attacks: Overwhelming cloud services with traffic to render them unavailable to legitimate users.
+            `},                 
+            { heading: `Best Practices for Cloud Security`, text: `● Implement Strong Access Controls: Utilize multi-factor authentication and role-based access to limit exposure.
+                                                            ● Regularly Audit and Monitor: Continuously assess cloud configurations and monitor for unusual activities.
+                                                            ● Secure APIs: Ensure APIs are authenticated, encrypted, and regularly tested for vulnerabilities.
+                                                            ● Educate and Train Staff: Promote security awareness to mitigate insider threats.
+                                                            ● Develop Incident Response Plans: Prepare for potential breaches with well-defined response strategies.
+            `}                 
+        ],
+        image: attack_cloud
     }
 };
 

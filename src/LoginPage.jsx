@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import loginpageimage from './assets/LoginPageImage.png';
+import { toast } from 'react-toastify';
 import styles from './loginstyles.module.css';
 
 export default function LoginPage() {
@@ -11,10 +12,10 @@ export default function LoginPage() {
     const handleLogin = () => {
         console.log('Login attempt with:', email, password);
         if (email === 'cyber' && password === '123') {
-            window.alert('Login Success');
+            toast.success('Login Success');
             navigation('/HomePage');
         } else {
-            window.alert('User Not Found');
+            toast.error('User not Found!');
         }
     };
 
