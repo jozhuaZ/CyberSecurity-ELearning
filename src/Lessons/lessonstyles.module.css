@@ -19,7 +19,7 @@
 
 .title_container h1 {
     text-align: center;
-    font: bold 2.5rem 'Poppins';
+    font: bold 2.5rem 'Poppins', sans-serif;
     color: #2c3e50;
 }
 
@@ -29,16 +29,19 @@
     max-width: 800px;
     margin: 0 auto 30px;
     line-height: 1.6;
-    color: black; 
+    color: black;
     font-size: 1.4rem;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
+
+/* Lesson content layout */
 .lesson_container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .lesson_content {
@@ -53,25 +56,67 @@
 }
 
 .lesson_image img {
-    width: 500px;
-    height: 500px;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 10px;
 }
 
+/* Section block */
 .section {
     padding: 20px;
     border-radius: 10px;
-    width: 80%; 
-    max-width: 800px;
+    width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .lesson_container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .lesson_content,
+    .lesson_image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .overview_container {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .title_container h1 {
+        font-size: 2rem;
+    }
+
+    .lesson_image img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .section {
-        width: 95%;
+        width: 100%;
+        padding: 15px;
     }
 }
 
+@media (max-width: 480px) {
+    .title_container h1 {
+        font-size: 1.8rem;
+    }
+
+    .overview_container {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
